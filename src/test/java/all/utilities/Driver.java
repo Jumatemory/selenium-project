@@ -28,6 +28,7 @@ public class Driver {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().addArguments("disable-extensions"));
+                    driver.manage().window().fullscreen();
                     break;
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
