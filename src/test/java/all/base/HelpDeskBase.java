@@ -18,12 +18,13 @@ public class HelpDeskBase {
 
 
     @BeforeMethod()
-    public void setUpMethod() {
+    public void setUpMethod() throws InterruptedException {
 
         driver = Driver.getDriver();
-        wait = new WebDriverWait(driver, 10);
+
         driver.manage().window().maximize();
-        driver.get(ConfigurationReader.getProperty("vytrack_url"));
+        driver.get(ConfigurationReader.getProperty("url"));
+
 
     }
 
